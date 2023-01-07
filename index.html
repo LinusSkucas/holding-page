@@ -11,13 +11,18 @@
 		<meta property="og:title" content="👁️🦕👁️" />
 		<meta property="og:description" content="Dinos!" />
 		<meta property="og:url" content="https://yak.ink/elevator/wait.html" />
-		<audio loop autoplay="true">
+		<!-- <audio loop autoplay="true">
 			<source src="https://cloud-pba2emxos-hack-club-bot.vercel.app/0waiting-music-116216_audio.mp4" type="audio/mpeg">
-		</audio>
-		<script type="text/javascript" src="stuff.js"></script>
+		</audio> -->
+
 
 	</head>
 	<body>
+		<div id="splash">
+		  <button id="btn"><h1>Click me</h1></button>
+		  <script type="text/javascript" src="stuff.js"></script>
+
+		</div>
 				<div class="mom" style="">
 		<marquee bgcolor="green">
 			Please wait for things to happen
@@ -46,12 +51,47 @@
 			</marquee>
 		</marquee>
 		<style>
+			#splash {
+			  position: absolute;
+			  left: 0;
+			  top: 0;
+			  width: 100vw;
+			  height: 100vh;
+			  display: flex;
+			  align-items: center;
+			  justify-content: center;
+			  animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both infinite;
+				transform: translate3d(0, 0, 0);
+				backface-visibility: hidden;
+				perspective: 1000px;
+			}
+			#splash p { display: inline-block }
 			@keyframes hor-movement {
 			  from {
 				margin-left: 0%;
 			  }
 			  to {
 				margin-left: 100%;
+			  }
+			}
+
+			@keyframes shake {
+			  10%,
+			  90% {
+				transform: translate3d(-1px, 0, 0);
+			  }
+			  20%,
+			  80% {
+				transform: translate3d(2px, 0, 0);
+			  }
+			  30%,
+			  50%,
+			  70% {
+				transform: translate3d(-4px, 0, 0);
+			  }
+			  40%,
+			  60% {
+				transform: translate3d(4px, 0, 0);
 			  }
 			}
 
